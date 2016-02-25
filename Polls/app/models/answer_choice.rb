@@ -1,5 +1,8 @@
 class AnswerChoice < ActiveRecord::Base
 
+  validates :text, presence: true
+  
+
   has_many(
     :responses,
     class_name: 'Response',
